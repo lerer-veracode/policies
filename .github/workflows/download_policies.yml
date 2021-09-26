@@ -1,4 +1,4 @@
-name: Deploy Veracode Pipeline Scanner
+name: Update Latest Policies for Veracode Pipeline Scanner 
 on:
   workflow_dispatch:
   
