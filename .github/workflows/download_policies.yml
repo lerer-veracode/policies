@@ -1,0 +1,43 @@
+name: Deploy Veracode Pipeline Scanner
+on:
+  workflow_dispatch:
+  
+  schedule:
+    - cron: 30 14 * * *
+
+jobs:
+  download_policies_global:
+    runs-on: ubuntu-latest
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - name: create dir prior
+        run: |
+          mkdir dls
+      - name: Download pipeline code
+        working-directory: ./dls/
+        run: |
+          curl https://downloads.veracode.com/securityscan/pipeline-scan-LATEST.zip -o veracode.zip
+          unzip veracode.zip
+      - name: Download Policy High Risk
+        continue-on-error: true
+        run: java -jar ./dls/pipeline-scan.jar --veracode_api_id "${{secrets.VERACODE_ID}}" --veracode_api_key "${{secrets.VERACODE_KEY}}" --request_policy "Fix High Severity - non scored"
+      - name: Download Policy Highly Sensitive
+        continue-on-error: true
+        run: java -jar ./dls/pipeline-scan.jar --veracode_api_id "${{secrets.VERACODE_ID}}" --veracode_api_key "${{secrets.VERACODE_KEY}}" --request_policy "Acceptable quality"
+      - name: Clean-ups and alias
+        run: |
+          echo "Remove veracode files"
+          rm -rf dls/*
+          mkdir -p sec
+          mv -f Fix_High_Severity_-_non_scored.json sec/High.json
+          mv -f Acceptable_quality.json sec/HighlySensitive.json
+      - name: Push the policies
+        run: |
+          git config user.email "${{secrets.USER_EMAIL}}"
+          git config user.name "${{secrets.USER_NAME}}"
+          git add "sec/High.json"
+          git add "sec/HighlySensitive.json"
+          git commit -m "Updates Policies"
+          git push origin ${{ github.ref }}          
+    
