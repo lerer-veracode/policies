@@ -1,0 +1,72 @@
+{
+  "_embedded": {
+    "policy_versions": [
+      {
+        "sev5_grace_period": 0,
+        "sev4_grace_period": 0,
+        "sev3_grace_period": 0,
+        "sev2_grace_period": 0,
+        "sev1_grace_period": 0,
+        "sev0_grace_period": 0,
+        "score_grace_period": 0,
+        "sca_blacklist_grace_period": 0,
+        "guid": "d12ef500-1d50-488f-95c6-991dde4664ee",
+        "name": "Acceptable quality",
+        "type": "CUSTOMER",
+        "description": "the plugin allowed quality",
+        "version": 2,
+        "scan_frequency_rules": [
+          {
+            "scan_type": "ANY",
+            "frequency": "SEMI_ANNUALLY"
+          }
+        ],
+        "finding_rules": [
+          {
+            "type": "CVSS",
+            "scan_type": [
+              "SCA"
+            ],
+            "value": "4"
+          },
+          {
+            "type": "MAX_SEVERITY",
+            "scan_type": [
+              "DYNAMIC",
+              "MANUAL",
+              "STATIC"
+            ],
+            "value": "2"
+          }
+        ],
+        "vendor_policy": false,
+        "custom_severities": [],
+        "created": "2021-09-26T02:12:22.000Z",
+        "modified_by": "verainternal_ylerer",
+        "category": "APPLICATION",
+        "organization_id": 74838,
+        "_links": {
+          "self": {
+            "href": "https://api.veracode.com/appsec/v1/policies/d12ef500-1d50-488f-95c6-991dde4664ee/versions/2"
+          }
+        },
+        "capabilities": []
+      }
+    ]
+  },
+  "_links": {
+    "self": {
+      "href": "https://api.veracode.com/appsec/v1/policies/?public_policy\u003dtrue\u0026name\u003dAcceptable%20quality{\u0026page,size,org,vendor_policy,legacy_policy_id,name_exact,category}",
+      "templated": true
+    }
+  },
+  "page": {
+    "size": 20,
+    "total_elements": 1,
+    "total_pages": 1,
+    "number": 0
+  },
+  "capabilities": [
+    "edit_policy"
+  ]
+}
