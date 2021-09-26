@@ -33,6 +33,7 @@ jobs:
           mv -f Fix_High_Severity_-_non_scored.json sec/High.json
           mv -f Acceptable_quality.json sec/HighlySensitive.json
       - name: Push the policies
+        continue-on-error: true
         run: |
           git config user.email "${{secrets.USER_EMAIL}}"
           git config user.name "${{secrets.USER_NAME}}"
