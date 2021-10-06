@@ -23,22 +23,6 @@
         ],
         "finding_rules": [
           {
-            "type": "LICENSE_RISK",
-            "scan_type": [
-              "SCA"
-            ],
-            "value": "4"
-          },
-          {
-            "type": "SECURITY_STANDARD",
-            "scan_type": [
-              "MANUAL",
-              "DYNAMIC",
-              "STATIC"
-            ],
-            "value": "owasp_17"
-          },
-          {
             "type": "CVSS",
             "scan_type": [
               "SCA"
@@ -46,7 +30,16 @@
             "value": "8"
           },
           {
-            "type": "MAX_SEVERITY",
+            "type": "SECURITY_STANDARD",
+            "scan_type": [
+              "MANUAL",
+              "STATIC",
+              "DYNAMIC"
+            ],
+            "value": "owasp_17"
+          },
+          {
+            "type": "LICENSE_RISK",
             "scan_type": [
               "SCA"
             ],
@@ -56,8 +49,15 @@
             "type": "MAX_SEVERITY",
             "scan_type": [
               "MANUAL",
-              "DYNAMIC",
-              "STATIC"
+              "STATIC",
+              "DYNAMIC"
+            ],
+            "value": "4"
+          },
+          {
+            "type": "MAX_SEVERITY",
+            "scan_type": [
+              "SCA"
             ],
             "value": "4"
           }
