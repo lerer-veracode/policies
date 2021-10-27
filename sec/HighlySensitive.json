@@ -26,8 +26,8 @@
             "type": "MAX_SEVERITY",
             "scan_type": [
               "STATIC",
-              "MANUAL",
-              "DYNAMIC"
+              "DYNAMIC",
+              "MANUAL"
             ],
             "value": "2"
           },
