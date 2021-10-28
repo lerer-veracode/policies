@@ -30,11 +30,18 @@
             "value": "4"
           },
           {
+            "type": "CVSS",
+            "scan_type": [
+              "SCA"
+            ],
+            "value": "8"
+          },
+          {
             "type": "SECURITY_STANDARD",
             "scan_type": [
               "STATIC",
-              "DYNAMIC",
-              "MANUAL"
+              "MANUAL",
+              "DYNAMIC"
             ],
             "value": "owasp_17"
           },
@@ -42,17 +49,10 @@
             "type": "MAX_SEVERITY",
             "scan_type": [
               "STATIC",
-              "DYNAMIC",
-              "MANUAL"
+              "MANUAL",
+              "DYNAMIC"
             ],
             "value": "4"
-          },
-          {
-            "type": "CVSS",
-            "scan_type": [
-              "SCA"
-            ],
-            "value": "8"
           },
           {
             "type": "MAX_SEVERITY",
