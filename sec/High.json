@@ -25,9 +25,23 @@
           {
             "type": "MAX_SEVERITY",
             "scan_type": [
+              "SCA"
+            ],
+            "value": "4"
+          },
+          {
+            "type": "MAX_SEVERITY",
+            "scan_type": [
               "STATIC",
               "DYNAMIC",
               "MANUAL"
+            ],
+            "value": "4"
+          },
+          {
+            "type": "LICENSE_RISK",
+            "scan_type": [
+              "SCA"
             ],
             "value": "4"
           },
@@ -46,20 +60,6 @@
               "SCA"
             ],
             "value": "8"
-          },
-          {
-            "type": "MAX_SEVERITY",
-            "scan_type": [
-              "SCA"
-            ],
-            "value": "4"
-          },
-          {
-            "type": "LICENSE_RISK",
-            "scan_type": [
-              "SCA"
-            ],
-            "value": "4"
           }
         ],
         "vendor_policy": false,
