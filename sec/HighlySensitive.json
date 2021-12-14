@@ -23,6 +23,13 @@
         ],
         "finding_rules": [
           {
+            "type": "CVSS",
+            "scan_type": [
+              "SCA"
+            ],
+            "value": "4"
+          },
+          {
             "type": "MAX_SEVERITY",
             "scan_type": [
               "DYNAMIC",
@@ -30,13 +37,6 @@
               "MANUAL"
             ],
             "value": "2"
-          },
-          {
-            "type": "CVSS",
-            "scan_type": [
-              "SCA"
-            ],
-            "value": "4"
           }
         ],
         "vendor_policy": false,
