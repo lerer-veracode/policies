@@ -37,15 +37,6 @@
             "value": "4"
           },
           {
-            "type": "SECURITY_STANDARD",
-            "scan_type": [
-              "MANUAL",
-              "DYNAMIC",
-              "STATIC"
-            ],
-            "value": "owasp_17"
-          },
-          {
             "type": "CVSS",
             "scan_type": [
               "SCA"
@@ -56,18 +47,27 @@
             "type": "MAX_SEVERITY",
             "scan_type": [
               "MANUAL",
-              "DYNAMIC",
-              "STATIC"
+              "STATIC",
+              "DYNAMIC"
             ],
             "value": "4"
+          },
+          {
+            "type": "SECURITY_STANDARD",
+            "scan_type": [
+              "MANUAL",
+              "STATIC",
+              "DYNAMIC"
+            ],
+            "value": "owasp_17"
           }
         ],
         "vendor_policy": false,
         "custom_severities": [],
         "created": "2021-04-21T23:47:19.000Z",
         "modified_by": "verainternal_ylerer",
-        "organization_id": 74838,
         "category": "APPLICATION",
+        "organization_id": 74838,
         "_links": {
           "self": {
             "href": "https://api.veracode.com/appsec/v1/policies/26a0c234-f8eb-4bc8-a7a2-65c37d3c1857/versions/9"
