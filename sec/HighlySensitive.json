@@ -25,9 +25,9 @@
           {
             "type": "MAX_SEVERITY",
             "scan_type": [
+              "STATIC",
               "MANUAL",
-              "DYNAMIC",
-              "STATIC"
+              "DYNAMIC"
             ],
             "value": "2"
           },
@@ -43,8 +43,8 @@
         "custom_severities": [],
         "created": "2021-09-26T02:12:22.000Z",
         "modified_by": "verainternal_ylerer",
-        "organization_id": 74838,
         "category": "APPLICATION",
+        "organization_id": 74838,
         "_links": {
           "self": {
             "href": "https://api.veracode.com/appsec/v1/policies/d12ef500-1d50-488f-95c6-991dde4664ee/versions/2"
