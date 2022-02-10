@@ -23,9 +23,11 @@
         ],
         "finding_rules": [
           {
-            "type": "LICENSE_RISK",
+            "type": "MAX_SEVERITY",
             "scan_type": [
-              "SCA"
+              "STATIC",
+              "DYNAMIC",
+              "MANUAL"
             ],
             "value": "4"
           },
@@ -46,7 +48,7 @@
             "value": "8"
           },
           {
-            "type": "MAX_SEVERITY",
+            "type": "LICENSE_RISK",
             "scan_type": [
               "SCA"
             ],
@@ -55,9 +57,7 @@
           {
             "type": "MAX_SEVERITY",
             "scan_type": [
-              "STATIC",
-              "DYNAMIC",
-              "MANUAL"
+              "SCA"
             ],
             "value": "4"
           }
