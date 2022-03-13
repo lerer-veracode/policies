@@ -23,13 +23,6 @@
         ],
         "finding_rules": [
           {
-            "type": "CVSS",
-            "scan_type": [
-              "SCA"
-            ],
-            "value": "8"
-          },
-          {
             "type": "SECURITY_STANDARD",
             "scan_type": [
               "DYNAMIC",
@@ -37,6 +30,13 @@
               "STATIC"
             ],
             "value": "owasp_17"
+          },
+          {
+            "type": "CVSS",
+            "scan_type": [
+              "SCA"
+            ],
+            "value": "8"
           },
           {
             "type": "LICENSE_RISK",
