@@ -23,13 +23,20 @@
         ],
         "finding_rules": [
           {
-            "type": "MAX_SEVERITY",
+            "type": "SECURITY_STANDARD",
             "scan_type": [
-              "MANUAL",
               "STATIC",
-              "DYNAMIC"
+              "DYNAMIC",
+              "MANUAL"
             ],
-            "value": "4"
+            "value": "owasp_17"
+          },
+          {
+            "type": "CVSS",
+            "scan_type": [
+              "SCA"
+            ],
+            "value": "8"
           },
           {
             "type": "MAX_SEVERITY",
@@ -46,20 +53,13 @@
             "value": "4"
           },
           {
-            "type": "SECURITY_STANDARD",
+            "type": "MAX_SEVERITY",
             "scan_type": [
-              "MANUAL",
               "STATIC",
-              "DYNAMIC"
+              "DYNAMIC",
+              "MANUAL"
             ],
-            "value": "owasp_17"
-          },
-          {
-            "type": "CVSS",
-            "scan_type": [
-              "SCA"
-            ],
-            "value": "8"
+            "value": "4"
           }
         ],
         "vendor_policy": false,
