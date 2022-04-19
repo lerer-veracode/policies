@@ -1,9 +1,6 @@
 name: Update Latest Policies for Veracode Pipeline Scanner 
 on:
   workflow_dispatch:
-  
-  schedule:
-    - cron: 30 14 * * *
 
 jobs:
   download_policies_global:
